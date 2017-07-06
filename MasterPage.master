@@ -1,0 +1,40 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<meta http-equiv="x-ua-compatible" content="IE=9">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>Microwave Intake Form</title>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    </head>
+
+
+<body>
+    <form id="form1" runat="server">
+    <ajaxToolkit:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server" AsyncPostBackTimeout="400000" >  </ajaxToolkit:ToolkitScriptManager>
+    <div id="topLine">
+       <div id="header">
+         <ul class="nav">
+            <li><a href="MainPage.aspx">Home</a></li>
+            <li><asp:LinkButton ID="lb_feedback"  runat="server" OnClick="btn_feedback_Click" >Feedback</asp:LinkButton></li>
+        </ul>                
+        <h1><span>Microwave Intake Form</span></h1>
+        </div>
+    </div>
+
+    <div>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+
+    <div id="footer">
+        <%--<p>Design By:<a href="http://www.templatesforfree.net"> TemplatesForFree.net </a></p>--%>
+    </div>
+
+    </form>
+</body>
+</html>
